@@ -59,8 +59,7 @@ jobs:
         with:
           context: ./backend/
           push: true
-          tags: sadsadhead/kittygram_backend:latest
-  frontend_tests:
+          tags: sadsadhead/kittygram_backend:latest  frontend_tests:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
