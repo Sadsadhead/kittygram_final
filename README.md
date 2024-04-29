@@ -1,4 +1,4 @@
-[![Deploy Status](https://github.com/sadsadhead/kittygram_final/actions/workflows/deploy.yml/badge.svg)](https://github.com/sadsadhead/kittygram_final/actions/workflows/deploy.yml)
+[![Deploy Status](https://github.com/sadsadhead/kittygram_final/actions/workflows/main.yml/badge.svg)](https://github.com/sadsadhead/kittygram_final/actions/workflows/main.yml)
 
 ###   Описание проекта 
 
