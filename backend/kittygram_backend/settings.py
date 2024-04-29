@@ -60,7 +60,7 @@ WSGI_APPLICATION = 'kittygram_backend.wsgi.application'
 
 
 # При переключении DB_PLUG в положение, отличное от off, используется sqlite
-if os.getenv('DB_PLUG').lower() == 'off':
+if os.getenv('DB_PLUG', ' ').lower() == 'off':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
