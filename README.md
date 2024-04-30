@@ -43,17 +43,17 @@
 ### Развёртывание проекта 
 
 ####  Клонировать репозиторий проекта с помощью команды: 
-
 ` git clone https://github.com/sadsadhead/kittygram_final.git `
-
 #### Перейти в корневую директорию проекта: 
-
 `cd kittygram_final `
-
 #### Запустить Docker Compose для развёртывания контейнеров: 
-
-`docker-compose up --build `
-
+- Создайте файл .env на сервере, в директории kittygram_final/
+- Выполните эту команду на сервере в папке kittygram_final/
+`sudo docker compose -f docker-compose.production.yml up -d`
+- Выполните миграции, соберите статические файлы бэкенда и скопируйте их в /backend_static/static/:
+`sudo docker compose -f docker-compose.production.yml exec backend python manage.py migrate`
+`sudo docker compose -f docker-compose.production.yml exec backend python manage.py collectstatic`
+`sudo docker compose -f docker-compose.production.yml exec backend cp -r /app/collected_static/. /backend_static/static/ `
 После успешного развёртывания проект будет доступен по адресу **http://localhost:80/.** 
 
 ### Как заполнить .env 
